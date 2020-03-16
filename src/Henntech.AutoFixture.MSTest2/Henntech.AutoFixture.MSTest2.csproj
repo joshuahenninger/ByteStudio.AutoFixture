@@ -6,6 +6,7 @@
     <Authors>Joshua Henninger</Authors>
     <Company>Henntech</Company>
     <Description>Adds [AutoData] and [InlineData] attribute support to MSTest V2 unit tests.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

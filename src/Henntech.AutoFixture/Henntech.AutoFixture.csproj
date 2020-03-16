@@ -7,6 +7,7 @@
     <Company>Henntech</Company>
     <Authors>Joshua Henninger</Authors>
     <Description>Contains AutoFixture common interfaces, attributes, and customizations for testing extensibility.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
