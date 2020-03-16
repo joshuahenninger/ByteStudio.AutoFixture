@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Authors>Joshua Henninger</Authors>
+
+    <AssemblyName>Henntech.AutoFixture.AutoMoq.Tests</AssemblyName>
+
+    <RootNamespace>Henntech.AutoFixture.AutoMoq.Tests</RootNamespace>
+
+    <Company>Henntech</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="1.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Henntech.AutoFixture.AutoMoq\Henntech.AutoFixture.AutoMoq.csproj" />
+    <ProjectReference Include="..\..\src\Henntech.AutoFixture.MSTest2\Henntech.AutoFixture.MSTest2.csproj" />
+  </ItemGroup>
+
+</Project>

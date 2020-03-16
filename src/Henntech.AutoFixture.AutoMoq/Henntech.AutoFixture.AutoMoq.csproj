@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+    <AssemblyName>Henntech.AutoFixture.AutoMoq</AssemblyName>
+    <Authors>Henntech</Authors>
+    <Company>Joshua Henninger</Company>
+    <RootNamespace>AutoFixture.AutoMoq</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Henntech.AutoFixture.AutoMoq.xml</DocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>Henntech.AutoFixture.AutoMoq.xml</DocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoFixture.AutoMoq" Version="4.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Henntech.AutoFixture\Henntech.AutoFixture.csproj" />
+  </ItemGroup>
+
+</Project>
