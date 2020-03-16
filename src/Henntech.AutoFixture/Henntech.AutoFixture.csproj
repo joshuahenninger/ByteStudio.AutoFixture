@@ -6,6 +6,7 @@
     <AssemblyName>Henntech.AutoFixture</AssemblyName>
     <Company>Henntech</Company>
     <Authors>Joshua Henninger</Authors>
+    <Description>Contains AutoFixture common interfaces, attributes, and customizations for testing extensibility.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

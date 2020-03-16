@@ -5,6 +5,7 @@
     <RootNamespace>AutoFixture</RootNamespace>
     <Authors>Joshua Henninger</Authors>
     <Company>Henntech</Company>
+    <Description>Adds [AutoData] and [InlineData] attribute support to MSTest V2 unit tests.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

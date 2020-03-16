@@ -6,6 +6,7 @@
     <Authors>Henntech</Authors>
     <Company>Joshua Henninger</Company>
     <RootNamespace>AutoFixture.AutoMoq</RootNamespace>
+    <Description>Adds Moq support to AutoFixture-generated test dependencies via the [AutoMoq] attribute.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
