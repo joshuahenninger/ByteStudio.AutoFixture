@@ -46,8 +46,6 @@ public void ShouldDoSomethingElseGivenSomeCondition(int number1, int number2, st
 
 Example 3 - Define different sets of parameters to run for the same test.
 ```csharp
-
-```csharp
 [AutoData]
 [InlineData(1)]
 [InlineData(2)]
