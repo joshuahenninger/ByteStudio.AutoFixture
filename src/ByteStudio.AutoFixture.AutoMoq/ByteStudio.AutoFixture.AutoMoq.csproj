@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+    <AssemblyName>ByteStudio.AutoFixture.AutoMoq</AssemblyName>
+    <Authors>ByteStudio</Authors>
+    <Company>Joshua Henninger</Company>
+    <RootNamespace>AutoFixture.AutoMoq</RootNamespace>
+    <Description>Adds Moq support to AutoFixture-generated test dependencies via the [AutoMoq] attribute.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ByteStudio.AutoFixture.AutoMoq.xml</DocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>ByteStudio.AutoFixture.AutoMoq.xml</DocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoFixture.AutoMoq" Version="4.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ByteStudio.AutoFixture\ByteStudio.AutoFixture.csproj" />
+  </ItemGroup>
+
+</Project>

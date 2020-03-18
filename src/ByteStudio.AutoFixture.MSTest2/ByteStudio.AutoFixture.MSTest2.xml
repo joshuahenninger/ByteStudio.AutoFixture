@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteStudio.AutoFixture.MSTest2</name>
+    </assembly>
+    <members>
+        <member name="T:AutoFixture.AutoDataAttribute">
+            <summary>
+            Marks a method as a MSTest method whose arguments will be auto-generated using AutoFixture during a test run.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.AutoDataAttribute.TestMethodFixtureSource">
+            <summary>
+            Gets or sets the source used to create the <see cref="T:AutoFixture.IFixture"/> during a test run.
+            <para>Defaults to <see cref="P:AutoFixture.AutoDataAttribute.TestMethodFixtureSource"/>.</para>
+            </summary>
+        </member>
+        <member name="P:AutoFixture.AutoDataAttribute.TestMethodArgumentResolver">
+            <summary>
+            Gets or sets the resolver used to generate arguments for a test run.
+            <para>Defaults to <see cref="P:AutoFixture.AutoDataAttribute.TestMethodArgumentResolver"/>.</para>
+            </summary>
+        </member>
+        <member name="M:AutoFixture.AutoDataAttribute.Execute(Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod)">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.InlineDataAttribute">
+            <summary>
+            Defines inline data for a unit test marked with <see cref="T:AutoFixture.AutoDataAttribute"/>.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.InlineDataAttribute.DisplayName">
+            <summary>
+            Gets or sets the custom display name for the test.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.InlineDataAttribute.Data">
+            <summary>
+            Gets data for calling test method.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.InlineDataAttribute.TestMethodFixtureSource">
+            <summary>
+            Gets or sets the source used to create the <see cref="T:AutoFixture.IFixture"/> during a test run.
+            <para>Defaults to <see cref="P:AutoFixture.InlineDataAttribute.TestMethodFixtureSource"/>.</para>
+            </summary>
+        </member>
+        <member name="P:AutoFixture.InlineDataAttribute.TestMethodArgumentResolver">
+            <summary>
+            Gets or sets the resolver used to generate arguments for a test run.
+            <para>Defaults to <see cref="P:AutoFixture.InlineDataAttribute.TestMethodArgumentResolver"/>.</para>
+            </summary>
+        </member>
+        <member name="M:AutoFixture.InlineDataAttribute.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.InlineDataAttribute"/> class.
+            </summary>
+            <param name="data1"> The data object. </param>
+        </member>
+        <member name="M:AutoFixture.InlineDataAttribute.#ctor(System.Object,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.InlineDataAttribute"/> class which takes in an array of arguments.
+            </summary>
+            <param name="data1"> A data object. </param>
+            <param name="moreData"> More data. </param>
+        </member>
+        <member name="M:AutoFixture.InlineDataAttribute.GetData(System.Reflection.MethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.InlineDataAttribute.GetDisplayName(System.Reflection.MethodInfo,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.MethodInfoAdapter">
+            <summary>
+            Adapts a <see cref="P:AutoFixture.MethodInfoAdapter.MethodInfo"/> instance into a <see cref="T:AutoFixture.ITestMethodInfo"/> instance.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.MethodInfoAdapter.MethodInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:AutoFixture.MethodInfoAdapter.ParameterTypes">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.MethodInfoAdapter.#ctor(System.Reflection.MethodInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.MethodInfoAdapter"/> class.
+            </summary>
+            <param name="methodInfo">The <see cref="P:AutoFixture.MethodInfoAdapter.MethodInfo"/> to adapt.</param>
+        </member>
+        <member name="T:AutoFixture.MethodInfoExtensions">
+            <summary>
+            Contains extensions for <see cref="T:System.Reflection.MethodInfo"/> instances.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.MethodInfoExtensions.ToTestMethodInfo(System.Reflection.MethodInfo)">
+            <summary>
+            Converts a <see cref="T:System.Reflection.MethodInfo"/> instance into an instance of <see cref="T:AutoFixture.ITestMethodInfo"/>.
+            </summary>
+            <param name="source">The <see cref="T:System.Reflection.MethodInfo"/> to convert.</param>
+            <returns>An instance of <see cref="T:AutoFixture.ITestMethodInfo"/>.</returns>
+        </member>
+        <member name="T:AutoFixture.TestMethodExtensions">
+            <summary>
+            Contains extension methods for <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod"/>.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.TestMethodExtensions.ToTestMethodInfo(Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod)">
+            <summary>
+            Converts to an instance of <see cref="T:AutoFixture.ITestMethodInfo"/>.
+            </summary>
+            <param name="source">The <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod"/> instance to convert.</param>
+            <returns>The converted <see cref="T:AutoFixture.ITestMethodInfo"/>.</returns>
+        </member>
+        <member name="T:AutoFixture.TestMethodInfoAdapter">
+            <summary>
+            Adapts an <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod"/> instance to an <see cref="T:AutoFixture.ITestMethodInfo"/> instance.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.TestMethodInfoAdapter.MethodInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:AutoFixture.TestMethodInfoAdapter.ParameterTypes">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.TestMethodInfoAdapter.#ctor(Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.TestMethodInfoAdapter"/> class.
+            </summary>
+            <param name="testMethod">The MSTest test method info to adapt to an <see cref="T:AutoFixture.ITestMethodInfo"/> instance.</param>
+        </member>
+    </members>
+</doc>

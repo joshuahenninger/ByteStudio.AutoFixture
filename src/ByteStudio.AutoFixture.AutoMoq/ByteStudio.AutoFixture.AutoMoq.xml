@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteStudio.AutoFixture.AutoMoq</name>
+    </assembly>
+    <members>
+        <member name="T:AutoFixture.AutoMoqAttribute">
+            <summary>
+            Adds an AutoFixture customization that automatically generates mocked dependencies.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.AutoMoqAttribute.ConfigureMembers">
+            <summary>
+             Specifies whether members of a mock will be automatically setup to retrieve the return values from a fixture.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.AutoMoqAttribute.GenerateDelegates">
+            <summary>
+            If value is true, delegate requests are intercepted and created by Moq.
+            <para>Otherwise, if value is false, delegates are created by the AutoFixture kernel.</para>
+            </summary>
+        </member>
+        <member name="M:AutoFixture.AutoMoqAttribute.GetCustomization">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

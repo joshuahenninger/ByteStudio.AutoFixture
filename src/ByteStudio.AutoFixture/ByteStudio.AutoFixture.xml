@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteStudio.AutoFixture</name>
+    </assembly>
+    <members>
+        <member name="T:AutoFixture.FrozenAttribute">
+            <summary>
+            Freezes the type to a single value for all AutoFixture-generated instances.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.FrozenAttribute.GetCustomization(System.Reflection.ParameterInfo)">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.ICustomizationSource">
+            <summary>
+            Source of <see cref="T:AutoFixture.ICustomization"/> instances.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.ICustomizationSource.GetCustomization">
+            <summary>
+            Gets an <see cref="T:AutoFixture.ICustomization"/> customization.
+            </summary>
+        </member>
+        <member name="T:AutoFixture.IgnoreParametersTestMethodInfoDecorator">
+            <summary>
+            Adds behavior to an <see cref="T:AutoFixture.ITestMethodInfo"/> instance that skips a specified number of parameters.
+            <para>This is useful when certain parameters need to be ignored by the AutoFixture.</para>
+            </summary>
+        </member>
+        <member name="P:AutoFixture.IgnoreParametersTestMethodInfoDecorator.NumberOfParametersToIgnore">
+            <summary>
+            Gets or sets the number of parameters that should be ignored when <see cref="P:AutoFixture.IgnoreParametersTestMethodInfoDecorator.ParameterTypes"/> is called.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.IgnoreParametersTestMethodInfoDecorator.MethodInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:AutoFixture.IgnoreParametersTestMethodInfoDecorator.ParameterTypes">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.IgnoreParametersTestMethodInfoDecorator.#ctor(AutoFixture.ITestMethodInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.IgnoreParametersTestMethodInfoDecorator"/> class.
+            </summary>
+            <param name="testMethodInfoToDecorate">The <see cref="T:AutoFixture.ITestMethodInfo"/> to decorate.</param>
+        </member>
+        <member name="M:AutoFixture.IgnoreParametersTestMethodInfoDecorator.#ctor(AutoFixture.ITestMethodInfo,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.IgnoreParametersTestMethodInfoDecorator"/> class.
+            </summary>
+            <param name="testMethodInfoToDecorate">The <see cref="T:AutoFixture.ITestMethodInfo"/> to decorate.</param>
+            <param name="numberOfParametersToIgnore">The number of parameters that should be ignored when <see cref="P:AutoFixture.IgnoreParametersTestMethodInfoDecorator.ParameterTypes"/> is called.</param>
+        </member>
+        <member name="T:AutoFixture.IgnorePropertiesOfTypeAttribute">
+            <summary>
+            Prevents AutoFixture from generating properties of certain types.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.IgnorePropertiesOfTypeAttribute.Types">
+            <summary>
+            Gets or sets the property types to ignore during dependency generation.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.IgnorePropertiesOfTypeAttribute.#ctor(System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.IgnorePropertiesOfTypeAttribute"/> class.
+            </summary>
+            <param name="types">The property types to ignore during dependency generation.</param>
+        </member>
+        <member name="M:AutoFixture.IgnorePropertiesOfTypeAttribute.GetCustomization">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.IgnorePropertiesOfTypeCustomization">
+            <summary>
+            Customizes AutoFixture to omit generating properties of certain types.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.IgnorePropertiesOfTypeCustomization.Types">
+            <summary>
+            Gets or sets the property types to ignore during dependency generation.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.IgnorePropertiesOfTypeCustomization.Customize(AutoFixture.IFixture)">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.IgnorePropertiesOfTypeSpecimenBuilder">
+            <summary>
+            Omits generating properties of certain types.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.IgnorePropertiesOfTypeSpecimenBuilder.Types">
+            <summary>
+            Gets or sets the property types to ignore during dependency generation.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.IgnorePropertiesOfTypeSpecimenBuilder.Create(System.Object,AutoFixture.Kernel.ISpecimenContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.ITestMethodArgumentResolver">
+            <summary>
+            Resolves arguments for a test method.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.ITestMethodArgumentResolver.GetTestMethodArguments(AutoFixture.IFixture,AutoFixture.ITestMethodInfo)">
+            <summary>
+            Generates the arguments to execute a test method.
+            </summary>
+            <param name="fixture">The customized fixture from which to generate arguments.</param>
+            <param name="testMethodInfo">The test method being executed.</param>
+            <returns>The arguments to execute a test method.</returns>
+        </member>
+        <member name="T:AutoFixture.ITestMethodFixtureSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AutoFixture.ITestMethodFixtureSource.GetFixture(AutoFixture.ITestMethodInfo)">
+            <summary>
+            Gets an instance of <see cref="T:AutoFixture.IFixture"/> using the specified <paramref name="testMethodInfo"/>.
+            </summary>
+            <param name="testMethodInfo">The test method information used to get an <see cref="T:AutoFixture.IFixture"/> instance.</param>
+            <returns>An <see cref="T:AutoFixture.IFixture"/> instance.</returns>
+        </member>
+        <member name="T:AutoFixture.ITestMethodInfo">
+            <summary>
+            Test method information.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.ITestMethodInfo.MethodInfo">
+            <summary>
+            Gets the <see cref="P:AutoFixture.ITestMethodInfo.MethodInfo"/> for the test method.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.ITestMethodInfo.ParameterTypes">
+            <summary>
+            Gets the parameters of the test method.
+            </summary>
+        </member>
+        <member name="T:AutoFixture.RecursionDepthAttribute">
+            <summary>
+            Limits the recursion depth of generated circular dependencies.
+            <para>Depth &gt;= 1 where:
+            <list type="bullet">
+            <item>1 will only generate the root object of the circular dependency.<code>var thing = new RecursiveThing()</code></item>
+            <item>2 will generate the root object and one recursive child.
+            <code>
+            var thing = new RecursiveThing 
+            { 
+                Thing = new RecursiveThing() 
+            }
+            </code>
+            </item>
+            <item>...</item>
+            <item>n will generate the root object and n-1 recursive children.</item>
+            </list>
+            </para>
+            </summary>
+        </member>
+        <member name="M:AutoFixture.RecursionDepthAttribute.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.RecursionDepthAttribute"/> class.
+            </summary>
+            <param name="recursionDepth"></param>
+        </member>
+        <member name="M:AutoFixture.RecursionDepthAttribute.GetCustomization">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.RecursionDepthCustomization">
+            <summary>
+            Customizes AutoFixture by limiting the recursion depth of generated circular dependencies.
+            <para>Depth &gt;= 1 where:
+            <list type="bullet">
+            <item>1 will only generate the root object of the circular dependency.<code>var thing = new RecursiveThing()</code></item>
+            <item>2 will generate the root object and one recursive child.
+            <code>
+            var thing = new RecursiveThing 
+            { 
+                Thing = new RecursiveThing() 
+            }
+            </code>
+            </item>
+            <item>...</item>
+            <item>n will generate the root object and n-1 recursive children.</item>
+            </list>
+            </para>
+            </summary>
+        </member>
+        <member name="M:AutoFixture.RecursionDepthCustomization.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.RecursionDepthCustomization"/> class.
+            </summary>
+            <param name="recursionDepth"></param>
+        </member>
+        <member name="M:AutoFixture.RecursionDepthCustomization.Customize(AutoFixture.IFixture)">
+            <inheritdoc />
+        </member>
+        <member name="T:AutoFixture.TestMethodArgumentResolver">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.TestMethodArgumentResolver.GetTestMethodArguments(AutoFixture.IFixture,AutoFixture.ITestMethodInfo)">
+            <summary>
+            Generates the arguments to execute a test method.
+            </summary>
+            <param name="fixture">The customized fixture from which to generate arguments.</param>
+            <param name="testMethodInfo">The test method being executed.</param>
+            <returns>The arguments to execute a test method.</returns>
+        </member>
+        <member name="T:AutoFixture.TestMethodFixtureSource">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.TestMethodFixtureSource.GetFixture(AutoFixture.ITestMethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.TestMethodFixtureSource.CustomizeFixture(AutoFixture.IFixture,AutoFixture.ITestMethodInfo)">
+            <summary>
+            Customizes a fixture for test method execution.
+            <para>Override to change how the generated <paramref name="fixture"/> is customized.</para>
+            </summary>
+            <param name="fixture">The fixture to customize.</param>
+            <param name="testMethodInfo">The test method being executed.</param>
+        </member>
+        <member name="M:AutoFixture.TestMethodFixtureSource.CustomizeFixtureByMethod(AutoFixture.IFixture,AutoFixture.ITestMethodInfo)">
+            <summary>
+            Customizes a fixture in the order that the test method attributes are defined.
+            <para>Override to change how the generated <paramref name="fixture"/> is customized from the test method attributes.</para>
+            </summary>
+            <param name="fixture">The fixture being customized.</param>
+            <param name="testMethodInfo">The test method being executed.</param>
+        </member>
+        <member name="M:AutoFixture.TestMethodFixtureSource.CustomizeFixtureByParameters(AutoFixture.IFixture,AutoFixture.ITestMethodInfo)">
+            <summary>
+            Customizes a fixture in the order that the test method parameters are defined and in the order that each of the parameter attributes are defined.
+            <para>Override to change how the generated <paramref name="fixture"/> is customized from the test method parameter attributes.</para>
+            </summary>
+            <param name="fixture">The fixture to customize.</param>
+            <param name="testMethodInfo">The test method being executed.</param>
+        </member>
+        <member name="T:AutoFixture.TestMethodInfoExtensions">
+            <summary>
+            Contains extension method for <see cref="T:AutoFixture.ITestMethodInfo"/>.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.TestMethodInfoExtensions.IgnoreParameters(AutoFixture.ITestMethodInfo,System.Int32)">
+            <summary>
+            Returns a new <see cref="T:AutoFixture.ITestMethodInfo"/> instance which contains a subset of parameters from the source <paramref name="testMethodInfo"/> instance.
+            </summary>
+            <param name="testMethodInfo">The source <see cref="T:AutoFixture.ITestMethodInfo"/> instance.</param>
+            <param name="numberOfParametersToIgnore">The number of parameters to ignore from the <paramref name="testMethodInfo"/> instance.</param>
+            <returns>A new <see cref="T:AutoFixture.ITestMethodInfo"/> instance which contains a subset of parameters from the source <paramref name="testMethodInfo"/> instance.</returns>
+        </member>
+    </members>
+</doc>
