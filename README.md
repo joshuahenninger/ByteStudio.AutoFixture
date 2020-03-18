@@ -1,10 +1,10 @@
 # AutoFixture
 ## NuGet Packages
-### Henntech.AutoFixture
+### ByteStudio.AutoFixture
 Common interfaces, attributes, and AutoFixture customizations. 
 
 
-### Henntech.AutoFixture.MSTest2
+### ByteStudio.AutoFixture.MSTest2
 Adds AutoFixture support for MSTest V2 unit tests.
 
 Example 1 - Create test method with an AutoFixture-generated argument.
@@ -66,7 +66,7 @@ public void ShouldDoSomethingElseGivenAnotherCondition(int number, ClassUnderTes
 }
 ```
 
-### Henntech.AutoFixture.AutoMoq
+### ByteStudio.AutoFixture.AutoMoq
 Adds AutoMoq behavior to AutoFixture so interface dependencies are automatically mocked.
 
 _NOTE: If a parameter is an interface or has a dependency that is an interface, then [AutoMoq] must be added to the test method so AutoFixture knows how to generate a value._
