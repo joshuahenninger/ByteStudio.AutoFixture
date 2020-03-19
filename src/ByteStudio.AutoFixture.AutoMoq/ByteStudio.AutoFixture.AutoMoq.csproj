@@ -8,6 +8,7 @@
     <RootNamespace>AutoFixture.AutoMoq</RootNamespace>
     <Description>Adds Moq support to AutoFixture-generated test dependencies via the [AutoMoq] attribute.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/jayhenn/ByteStudio.AutoFixture</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -8,6 +8,7 @@
     <Authors>Joshua Henninger</Authors>
     <Description>Contains AutoFixture common interfaces, attributes, and customizations for testing extensibility.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/jayhenn/ByteStudio.AutoFixture</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
