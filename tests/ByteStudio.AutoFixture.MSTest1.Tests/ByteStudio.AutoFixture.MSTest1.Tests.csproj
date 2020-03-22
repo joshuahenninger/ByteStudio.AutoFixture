@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Authors>Joshua Henninger</Authors>
+
+    <PackageId>ByteStudio.AutoFixture.MSTest1.Tests</PackageId>
+
+    <Company>ByteStudio</Company>
+
+    <Product>ByteStudio.AutoFixture.MSTest1.Tests</Product>
+
+    <AssemblyName>ByteStudio.AutoFixture.MSTest1.Tests</AssemblyName>
+
+    <RootNamespace>ByteStudio.AutoFixture.MSTest1.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="1.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ByteStudio.AutoFixture.AutoMoq\ByteStudio.AutoFixture.AutoMoq.csproj" />
+    <ProjectReference Include="..\..\src\ByteStudio.AutoFixture.MSTest1\ByteStudio.AutoFixture.MSTest1.csproj" />
+  </ItemGroup>
+
+</Project>

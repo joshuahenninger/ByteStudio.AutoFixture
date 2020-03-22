@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.5</TargetFramework>
+    <Company>ByteStudio</Company>
+    <Authors>Joshua Henninger</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Adds [AutoData] and [InlineData] attribute support to MSTest V1 unit tests.</Description>
+    <PackageProjectUrl>https://github.com/jayhenn/ByteStudio.AutoFixture</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ByteStudio.AutoFixture.MSTest1.xml</DocumentationFile>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>ByteStudio.AutoFixture.MSTest1.xml</DocumentationFile>
+    <WarningLevel>3</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ByteStudio.AutoFixture\ByteStudio.AutoFixture.csproj" />
+  </ItemGroup>
+
+</Project>
