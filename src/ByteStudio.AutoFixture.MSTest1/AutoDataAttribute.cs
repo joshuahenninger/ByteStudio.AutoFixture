@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace ByteStudio.AutoFixture.MSTest1
+namespace AutoFixture
 {
     /// <summary>
     /// Marks a method as a MSTest method whose arguments will be auto-generated using AutoFixture during a test run.

@@ -4,29 +4,29 @@
         <name>ByteStudio.AutoFixture.MSTest1</name>
     </assembly>
     <members>
-        <member name="T:ByteStudio.AutoFixture.MSTest1.AutoDataAttribute">
+        <member name="T:AutoFixture.AutoDataAttribute">
             <summary>
             Marks a method as a MSTest method whose arguments will be auto-generated using AutoFixture during a test run.
             </summary>
         </member>
-        <member name="P:ByteStudio.AutoFixture.MSTest1.AutoDataAttribute.TestMethodFixtureSource">
+        <member name="P:AutoFixture.AutoDataAttribute.TestMethodFixtureSource">
             <summary>
             Gets or sets the source used to create the <see cref="T:AutoFixture.IFixture"/> during a test run.
-            <para>Defaults to <see cref="P:ByteStudio.AutoFixture.MSTest1.AutoDataAttribute.TestMethodFixtureSource"/>.</para>
+            <para>Defaults to <see cref="P:AutoFixture.AutoDataAttribute.TestMethodFixtureSource"/>.</para>
             </summary>
         </member>
-        <member name="P:ByteStudio.AutoFixture.MSTest1.AutoDataAttribute.TestMethodArgumentResolver">
+        <member name="P:AutoFixture.AutoDataAttribute.TestMethodArgumentResolver">
             <summary>
             Gets or sets the resolver used to generate arguments for a test run.
-            <para>Defaults to <see cref="P:ByteStudio.AutoFixture.MSTest1.AutoDataAttribute.TestMethodArgumentResolver"/>.</para>
+            <para>Defaults to <see cref="P:AutoFixture.AutoDataAttribute.TestMethodArgumentResolver"/>.</para>
             </summary>
         </member>
-        <member name="M:ByteStudio.AutoFixture.MSTest1.AutoDataAttribute.Execute(Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod)">
+        <member name="M:AutoFixture.AutoDataAttribute.Execute(Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod)">
             <inheritdoc />
         </member>
         <member name="T:AutoFixture.InlineDataAttribute">
             <summary>
-            Defines inline data for a unit test marked with <see cref="!:AutoDataAttribute"/>.
+            Defines inline data for a unit test marked with <see cref="T:AutoFixture.AutoDataAttribute"/>.
             </summary>
         </member>
         <member name="P:AutoFixture.InlineDataAttribute.DisplayName">
