@@ -7,6 +7,12 @@ Common interfaces, attributes, and AutoFixture customizations.
 ### ByteStudio.AutoFixture.MSTest2
 Adds AutoFixture support for MSTest V2 unit tests.
 
+---
+
+_There is also a ByteStudio.AutoFixture.MSTest1 package if you still support MSTest V1 unit tests._
+
+---
+
 Example 1 - Create test method with an AutoFixture-generated argument.
 ```csharp
 [AutoData]
