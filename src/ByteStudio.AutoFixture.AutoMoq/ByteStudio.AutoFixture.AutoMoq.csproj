@@ -3,12 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
     <AssemblyName>ByteStudio.AutoFixture.AutoMoq</AssemblyName>
-    <Authors>ByteStudio</Authors>
-    <Company>Joshua Henninger</Company>
+    <Authors>Joshua Henninger</Authors>
+    <Company>ByteStudio</Company>
     <RootNamespace>AutoFixture.AutoMoq</RootNamespace>
     <Description>Adds Moq support to AutoFixture-generated test dependencies via the [AutoMoq] attribute.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/jayhenn/ByteStudio.AutoFixture</PackageProjectUrl>
+    <PackageTags></PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
