@@ -27,7 +27,9 @@ namespace AutoFixture
         /// <summary>
         /// Initializes a new instance of the <see cref="RecursionDepthAttribute"/> class.
         /// </summary>
-        /// <param name="recursionDepth"></param>
+        /// <param name="recursionDepth">The recursion depth at which the request will be omitted.
+        /// <para>1 will not generate any circular dependencies; 2 will generate 1 circular dependency; etc.</para>
+        /// </param>
         public RecursionDepthAttribute(int recursionDepth = 1)
         {
             _recursionDepth = recursionDepth;

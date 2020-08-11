@@ -70,35 +70,6 @@
         <member name="M:AutoFixture.InlineDataAttribute.GetDisplayName(System.Reflection.MethodInfo,System.Object[])">
             <inheritdoc />
         </member>
-        <member name="T:AutoFixture.MethodInfoAdapter">
-            <summary>
-            Adapts a <see cref="P:AutoFixture.MethodInfoAdapter.MethodInfo"/> instance into a <see cref="T:AutoFixture.ITestMethodInfo"/> instance.
-            </summary>
-        </member>
-        <member name="P:AutoFixture.MethodInfoAdapter.MethodInfo">
-            <inheritdoc />
-        </member>
-        <member name="P:AutoFixture.MethodInfoAdapter.ParameterTypes">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoFixture.MethodInfoAdapter.#ctor(System.Reflection.MethodInfo)">
-            <summary>
-            Initializes a new instance of the <see cref="T:AutoFixture.MethodInfoAdapter"/> class.
-            </summary>
-            <param name="methodInfo">The <see cref="P:AutoFixture.MethodInfoAdapter.MethodInfo"/> to adapt.</param>
-        </member>
-        <member name="T:AutoFixture.MethodInfoExtensions">
-            <summary>
-            Contains extensions for <see cref="T:System.Reflection.MethodInfo"/> instances.
-            </summary>
-        </member>
-        <member name="M:AutoFixture.MethodInfoExtensions.ToTestMethodInfo(System.Reflection.MethodInfo)">
-            <summary>
-            Converts a <see cref="T:System.Reflection.MethodInfo"/> instance into an instance of <see cref="T:AutoFixture.ITestMethodInfo"/>.
-            </summary>
-            <param name="source">The <see cref="T:System.Reflection.MethodInfo"/> to convert.</param>
-            <returns>An instance of <see cref="T:AutoFixture.ITestMethodInfo"/>.</returns>
-        </member>
         <member name="T:AutoFixture.TestMethodExtensions">
             <summary>
             Contains extension methods for <see cref="T:Microsoft.VisualStudio.TestTools.UnitTesting.ITestMethod"/>.

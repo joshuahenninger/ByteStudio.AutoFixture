@@ -137,6 +137,35 @@
             Gets the parameters of the test method.
             </summary>
         </member>
+        <member name="T:AutoFixture.MethodInfoAdapter">
+            <summary>
+            Adapts a <see cref="P:AutoFixture.MethodInfoAdapter.MethodInfo"/> instance into a <see cref="T:AutoFixture.ITestMethodInfo"/> instance.
+            </summary>
+        </member>
+        <member name="P:AutoFixture.MethodInfoAdapter.MethodInfo">
+            <inheritdoc />
+        </member>
+        <member name="P:AutoFixture.MethodInfoAdapter.ParameterTypes">
+            <inheritdoc />
+        </member>
+        <member name="M:AutoFixture.MethodInfoAdapter.#ctor(System.Reflection.MethodInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AutoFixture.MethodInfoAdapter"/> class.
+            </summary>
+            <param name="methodInfo">The <see cref="P:AutoFixture.MethodInfoAdapter.MethodInfo"/> to adapt.</param>
+        </member>
+        <member name="T:AutoFixture.MethodInfoExtensions">
+            <summary>
+            Contains extensions for <see cref="T:System.Reflection.MethodInfo"/> instances.
+            </summary>
+        </member>
+        <member name="M:AutoFixture.MethodInfoExtensions.ToTestMethodInfo(System.Reflection.MethodInfo)">
+            <summary>
+            Converts a <see cref="T:System.Reflection.MethodInfo"/> instance into an instance of <see cref="T:AutoFixture.ITestMethodInfo"/>.
+            </summary>
+            <param name="source">The <see cref="T:System.Reflection.MethodInfo"/> to convert.</param>
+            <returns>An instance of <see cref="T:AutoFixture.ITestMethodInfo"/>.</returns>
+        </member>
         <member name="T:AutoFixture.RecursionDepthAttribute">
             <summary>
             Limits the recursion depth of generated circular dependencies.
@@ -161,7 +190,9 @@
             <summary>
             Initializes a new instance of the <see cref="T:AutoFixture.RecursionDepthAttribute"/> class.
             </summary>
-            <param name="recursionDepth"></param>
+            <param name="recursionDepth">The recursion depth at which the request will be omitted.
+            <para>1 will not generate any circular dependencies; 2 will generate 1 circular dependency; etc.</para>
+            </param>
         </member>
         <member name="M:AutoFixture.RecursionDepthAttribute.GetCustomization">
             <inheritdoc />
@@ -190,7 +221,9 @@
             <summary>
             Initializes a new instance of the <see cref="T:AutoFixture.RecursionDepthCustomization"/> class.
             </summary>
-            <param name="recursionDepth"></param>
+            <param name="recursionDepth">The recursion depth at which the request will be omitted.
+            <para>1 will not generate any circular dependencies; 2 will generate 1 circular dependency; etc.</para>
+            </param>
         </member>
         <member name="M:AutoFixture.RecursionDepthCustomization.Customize(AutoFixture.IFixture)">
             <inheritdoc />
