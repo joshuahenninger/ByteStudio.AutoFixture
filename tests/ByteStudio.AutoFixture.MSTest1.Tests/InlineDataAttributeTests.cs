@@ -51,6 +51,21 @@ namespace ByteStudio.AutoFixture.MSTest1.Tests
 
         }
 
+        [AutoData]
+        [InlineData(1, 1)]
+        [InlineData("hello", "hello")]
+        public void MultipleInlineDataAttributesShouldBeAllBeExecuted(object expected, object actual)
+        {
+            // Arrange
+
+
+            // Act
+
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
         public interface InlineDataAttributeTestInterface
         {
             // Do not alter this interface in any way as it it used for tests within this test class.
