@@ -10,6 +10,7 @@ namespace AutoFixture
     /// <summary>
     /// Defines inline data for a unit test marked with <see cref="AutoDataAttribute"/>.
     /// </summary>
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
     public class InlineDataAttribute : Attribute, ITestDataSource
     {
         /// <summary>
